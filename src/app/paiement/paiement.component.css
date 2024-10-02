@@ -1,0 +1,30 @@
+.cardPaiement {
+  background-color: rgb(220, 220, 220, 0.4);
+  border-radius: 15px;
+}
+
+.procederPaiement {
+  background: linear-gradient(90deg, rgba(146,202,234,1) 0%, rgba(181,218,226,1) 100%);  /*bleu clair img*/
+}
+
+.boutonPaiement {
+  text-align: center;
+}
+
+h2{
+  font-family: 'Acme', sans-serif;
+  font-size: 5em;
+  text-align: center;
+}
+
+.card-body{
+  width: 40vw;
+}
+
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .card-body{
+    width: 80vw;
+  }
+}

@@ -1,0 +1,47 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h2 class="my-5">Nous contacter</h2>
+</div>
+<div class="d-flex flex-column contactPage">
+  <div class="d-flex justify-content-between align-items-center">
+    <h3 class="cardTitle">Poke Send Card</h3>
+    <img class="pokeTimbre" src="assets/img/timbre.png">
+  </div>
+  <div class="d-flex flex-wrap">
+    <div class="w-25 infoContact">
+      <h3>Destinataire</h3>
+      <div class="d-flex flex-column mt-4">
+        <h4>Equipe PikaPlush</h4>
+        <p class="my-2"> pikaplush.contact@gmail.com </p>
+        <p class="my-2"> 07 67 72 91 XX</p>
+        <p class="my-2"> 4 rue Edouard Branly</p>
+        <p class="my-2">90000 Belfort</p>
+      </div>
+
+    </div>
+    <div class="w-75 formContact">
+      <h3>Expéditeur</h3>
+      <form [formGroup]="emailForm">
+        <div class="form-group">
+          <input type="text" class="form-control" id="nomInput" placeholder="Nom" formControlName="name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="prenomInput" placeholder="Prenom" formControlName="prenom">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="objetInput" placeholder="Objet" formControlName="objet">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="emailInput" placeholder="Email" formControlName="email" required>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="messageInput" placeholder="Message" rows="6" formControlName="message" required></textarea>
+        </div>
+
+        <p id="messageErreurContact"></p>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-outline-danger mb-3" type="button" (click)="sendEmail()"><i class="fas fa-2x fa-paper-plane p-1"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

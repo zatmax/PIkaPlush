@@ -1,0 +1,30 @@
+.formLogin{
+  border: black 1px solid;
+  padding: 3em;
+  border-radius: 10px;
+  display: flex!important;
+  flex-direction: row!important;
+  width: 50vw;
+  margin: 0!important;
+}
+
+.formLogin button{
+  background-color: red;
+  color: white;
+  border: none
+}
+
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .formLogin{
+    width: 100%;
+  }
+  .formLogin form{
+    width: 100%!important;
+  }
+
+  .formLogin img{
+    display: none;
+  }
+}

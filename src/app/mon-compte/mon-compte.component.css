@@ -1,0 +1,209 @@
+.btnPlusInfoCompte {
+  background-color: #54a5ec;
+  color: white;
+}
+
+.info {
+  width: max-content;
+}
+
+.info img{
+  width: 2em;
+}
+
+
+h2{
+  font-family: 'Acme', sans-serif;
+  font-size: 5em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+
+.pageCompte {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+.pageCompte h1 {
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 2.5em;
+  padding-top: 0.5em
+}
+
+.iconCompte{
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 20em;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.CompteInfos{
+  align-items: center!important;
+}
+
+.boxInfoCompte{
+  width: 50vw!important;
+}
+
+.CompteImg img {
+  width: 20em;
+}
+
+
+.carteCompte {
+  width: 90%;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #c9c9c9;
+  background-color: #ffc07c;
+}
+
+.boucleCompte {
+  margin-bottom: 30px;
+}
+
+.boxboxCompteInfo{
+  width: 50vw!important;
+}
+
+.boxInfoCompte {
+  width: 100%!important;
+}
+
+.btnNewEntreprise{
+  width: max-content;
+}
+
+.boxInfoCompte p {
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  width: 100%!important;
+}
+
+
+.iconEntreprise{
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 20em;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.boxInfoEntreprise{
+  width: 50vw!important;
+}
+
+.produitImg img {
+  width: 15em;
+}
+
+.card-price {
+  color: red;
+  text-align: right;
+}
+
+.card {
+  background-color: rgba(252, 224, 100, 0.3);
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #c9c9c9;
+}
+
+.btn-success {
+  margin-right: 10px;
+}
+
+.carteEntreprise {
+  width: 90%;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #c9c9c9;
+  background-color: var(--new-bleu-clair-color);
+}
+
+.boucleProduit {
+  margin-bottom: 30px;
+}
+
+.boxInfoEntreprise {
+  width: 100%;
+}
+
+.boxInfoEntreprise p {
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+}
+
+.produitEntreprise h2 {
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+}
+
+#btnModifProduit {
+  background-color: #797872;
+  color: white;
+  border: 1px solid #797872;
+}
+
+
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .CompteInfos{
+    flex-direction: column;
+  }
+  .iconCompte{
+    width: 100%;
+  }
+  .boxInfoCompte{
+    align-items: center;
+    padding: 0!important;
+  }
+  .boxInfoCompte{
+    width: 100%!important;
+  }
+  .boxInfoCompte p{
+    width: 100%!important;
+  }
+  .boxboxCompteInfo{
+    width: 100%!important;
+  }
+  .entrepriseInfos{
+    flex-direction: column;
+  }
+  .iconEntreprise{
+    width: 100%;
+  }
+  .boxInfoEntreprise{
+    align-items: center;
+    padding: 0!important;
+  }
+  .boxInfoEntreprise{
+    width: 100%!important;
+  }
+  .boxInfoEntreprise p{
+    width: 100%!important;
+  }
+
+  .btnPlusInfoCompte {
+    width: 100%!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

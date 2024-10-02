@@ -1,0 +1,55 @@
+<div class="pageCompte d-flex flex-column align-items-center justify-content-center">
+  <h2 class="my-5">Mon Compte</h2>
+  <h3 class="text-center">MES INFORMATIONS </h3>
+  <div class="carteCompte">
+    <div class="d-flex p-2 CompteInfos">
+      <div class="roleMonCompte" *ngIf="myinformations.role == 'client' else elseImage">
+        <img class="mt-3 iconCompte" src="./assets/img/client.png">
+        <p class="text-center"> client </p>
+      </div>
+      <ng-template #elseImage>
+        <div class="roleMonCompte">
+          <img class="iconCompte" src="./assets/img/vendeur.png">
+          <p class="text-center"> vendeur </p>
+        </div>
+      </ng-template>
+      <div class="d-flex flex-column boxboxCompteInfo">
+        <div class="ps-3 boxInfoCompte d-flex flex-column justify-content-center">
+          <p>Nom : {{myinformations.nom}}</p>
+          <p>Prénom : {{myinformations.prenom}}</p>
+          <p>Email : {{myinformations.email}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <h3 class="text-center pt-4">MON ENTREPRISE</h3>
+
+    <div *ngIf="myinformations.entreprise else elseEntreprise"  class="carteEntreprise">
+      <h1>{{myinformations.entreprise.nom}}</h1>
+      <div class="d-flex p-2 entrepriseInfos">
+        <img class="iconEntreprise" src="./assets/img/pokemart.png" alt="icon entreprise">
+        <div class="ps-3 boxInfoEntreprise d-flex flex-column justify-content-center">
+          <p>Adresse : {{myinformations.entreprise.adresse}}</p>
+          <p>Statut : {{myinformations.entreprise.type}}</p>
+          <p>Spécialité : {{myinformations.entreprise.spe}}</p>
+          <p>Siret : {{myinformations.entreprise.siret}}</p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <a class="btn info btnPlusInfoCompte m-3 d-flex align-items-center" id="monEntreprisebtn" [routerLink]="['/entreprises/'+ myinformations.entreprise.id]">Plus de détails<img src="./assets/img/loupe.png"></a>
+      </div>
+    </div>
+
+    <ng-template #elseEntreprise>
+      <div class="d-flex flex-column justify-content-center">
+        <p class="text-center">Vous n'avez pas encore d'entreprise</p>
+        <p class="text-center">Créez en une dès maintenant</p>
+        <a class="btn btn-success btnNewEntreprise mx-auto mb-2" [routerLink]="['/newEntreprise']">Créer mon entreprise</a>
+      </div>
+    </ng-template>
+  </div>

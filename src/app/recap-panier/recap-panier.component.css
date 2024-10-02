@@ -1,0 +1,37 @@
+.produitImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.produitImg img{
+  width: 8vw;
+}
+
+h2{
+  font-family: 'Acme', sans-serif;
+  font-size: 5em;
+  line-height: normal!important;
+  text-align: center;
+}
+
+.totalPrice{
+  font-size: 2em;
+}
+
+
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .produitImg img{
+    width: 20vw;
+  }
+
+  .produitPanier{
+    width: 90%;
+  }
+
+  h2{
+    font-size: 4em;
+  }
+}

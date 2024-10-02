@@ -1,0 +1,72 @@
+<div class="w-100 d-flex flex-column align-items-center justify-content-center">
+  <form class="my-4" #newProduitF="ngForm" (ngSubmit)="(newProduitF.form.valid && newProduitForm.categorieID != 0) && onSubmit()">
+    <div class="form-title">
+      <h1 class="text-uppercase fw-bold text-center mb-4">Ajouter un Produit</h1>
+    </div>
+    <div class="form-group">
+      <label for="nom" class="form-label"></label>
+      <input type="text" placeholder="Nom produit" class="form-control" id="nom" #nom="ngModel"
+             [(ngModel)]="newProduitForm.nom" name="nom" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="nom.errors && newProduitF.submitted">
+      le champ ne doit pas être vide
+    </div>
+    <div class="form-group">
+      <label for="prix" class="form-label"></label>
+      <input type="text" placeholder="Prix produit" class="form-control" id="prix" #prix="ngModel"
+             [(ngModel)]="newProduitForm.prix" name="prix" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="prix.errors && newProduitF.submitted">
+      le champ ne doit pas être vide
+    </div>
+    <div class="form-group">
+      <label for="description" class="form-label"></label>
+      <input type="text" placeholder="Description produit" class="form-control" id="description" #description="ngModel"
+             [(ngModel)]="newProduitForm.description" name="description" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="description.errors && newProduitF.submitted">
+      le champ ne doit pas être vide
+    </div>
+    <div class="form-group">
+      <label for="taille" class="form-label"></label>
+      <input type="text" placeholder="Taille produit" class="form-control" id="taille" #taille="ngModel"
+             [(ngModel)]="newProduitForm.taille" name="taille" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="taille.errors && newProduitF.submitted">
+      le champ ne doit pas être vide
+    </div>
+
+    <div class="form-group">
+      <label for="image" class="form-label">Image produit</label>
+      <input type="file" class="form-control" id="image" (change)="onFileSelected($event)" name="image" required>
+    </div>
+
+    <div class="form-group">
+      <label for="category" class="form-label"></label>
+      <select class="form-select" id="category" #category="ngModel" [(ngModel)]="newProduitForm.categorieID"
+              name="category" required>
+        <option value="0">Choisissez une catégorie</option>
+        <option *ngFor="let category of categoriesList" [value]="category.id">{{ category.nom }}</option>
+      </select>
+    </div>
+
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="(category.errors || newProduitForm.categorieID == 0) && newProduitF.submitted">
+      Vous devez sélectionner une catégorie
+    </div>
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-success">Ajouter</button>
+    </div>
+  </form>
+  <p class="link-danger w-75 text-center">N.B L'image doit avoir un nom sans espace et sans caracteres spéciaux sinon elle ne sera pas insérée.</p>
+
+</div>

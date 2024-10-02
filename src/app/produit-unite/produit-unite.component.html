@@ -1,0 +1,23 @@
+<div class="pageProduit d-flex flex-column align-items-center justify-content-center">
+<div class="carteProduit">
+  <h1>{{oneProduit.nom}}</h1>
+  <div class="d-flex p-2 ProduitInfos">
+    <img class="iconProduit" [src]="oneProduit.image" alt="icon Produit">
+    <div class="d-flex flex-column boxboxProduitInfo">
+      <div class="ps-3 boxInfoProduit d-flex flex-column justify-content-center">
+        <h2>Infos produit :</h2>
+        <p>Taille : {{oneProduit.taille}}</p>
+        <p>Catégorie : {{oneProduit.categorie.nom}}</p>
+        <p>Description : {{oneProduit.desc}}</p>
+        <p>Prix : {{oneProduit.prix }}€</p>
+      </div>
+      <div class="ps-3 boxInfoProduit d-flex flex-column justify-content-center">
+        <h2>Infos vendeur :</h2>
+        <p>Entreprise : {{oneProduit.entreprise?.nom}}</p>
+        <p>Adresse : {{oneProduit.entreprise?.adresse}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<button *ngIf="loggedIn" class="btn ajoutPanier m-1 me-4" (click)="addToCart({id: oneProduit.id, nom: oneProduit.nom, prix: oneProduit.prix, desc: oneProduit.desc, taille: oneProduit.taille, image: oneProduit.image, categorie: oneProduit.categorie, entreprise: oneProduit.entreprise})"> Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
+</div>

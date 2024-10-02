@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@300;400;700&family=Rubik+Iso&display=swap');
+
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Acme', sans-serif;
+}
+
+.app{
+  display: flex;
+  flex-grow : 1;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,33 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h2 class="my-5"> Produits </h2>
+</div>
+
+<h3 class="px-3">Filtres</h3>
+<div class="d-flex containerFiltres align-items-center justify-content-between">
+  <div class="filtres px-3">
+    <label class="form-label" for="categorySort">Chercher par nom</label>
+    <input type="text" class="form-control" id="inputSearch" [(ngModel)]="selectInputSearch" placeholder="Rechercher par nom">
+  </div>
+  <div class="filtres px-3">
+    <label class="form-label" for="reverseSort">Trier par prix</label>
+    <select class="form-select" id="reverseSort" name="reverseSort" [(ngModel)]="selectReverseSort">
+      <option [ngValue]="false" selected>Prix croissant</option>
+      <option [ngValue]="true">Prix décroissant</option>
+    </select>
+  </div>
+  <div class="filtres px-3">
+    <label class="form-label" for="categorySort">Trier par catégorie</label>
+    <select class="form-select" id="categorySort" name="categorySort" [(ngModel)]="selectCategory">
+      <option [ngValue]="''" selected>Toutes</option>
+      <option *ngFor="let cat of categories" [ngValue]="cat.nom">{{cat.nom}}</option>
+    </select>
+  </div>
+</div>
+
+
+<div class="containerProduitCard py-3 d-flex flex-wrap m-0 justify-content-center">
+  <div class="d-flex justify-content-center" *ngFor="let produit of filteredProducts">
+    <app-produit-card [produit]="produit" ></app-produit-card>
+  </div>
+</div>
+

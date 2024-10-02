@@ -1,0 +1,24 @@
+<div class="pagePanier d-flex flex-column align-items-center justify-content-center">
+
+  <div class="produitPanier">
+    <h2 class="my-5">Récapitulatif de ma commande</h2>
+    <div class="d-flex flex-column" *ngFor="let item of myCart">
+
+
+      <div class="card w-full m-1 d-flex flex-row">
+        <div class="produitImg">
+          <img [src]="item.image" alt="icon entreprise"/>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item.nom}}</h5>
+          <p class="card-price">{{item.prix}} €</p>
+        </div>
+      </div>
+
+    </div>
+    <p class="totalPrice my-2">Total : {{this.totalPrice}} €</p>
+
+  </div>
+  <button class="btn btn btn-success my-2" style="margin-bottom: 15px; margin-left: 1%" [routerLink]="'/paiement'"> Valider mon panier</button>
+</div>
+

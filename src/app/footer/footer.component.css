@@ -1,0 +1,13 @@
+.footer{
+  background: black;
+  color: white;
+}
+
+.footer img{
+  width: 10em;
+}
+
+.footer p{
+  font-size: 1.15em;
+  font-weight: bold;
+}

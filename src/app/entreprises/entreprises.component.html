@@ -1,0 +1,26 @@
+<div class="d-flex flex-column align-items-center justify-content-center">
+  <div class="d-flex flex-column containerPage">
+    <div class="d-flex align-items-center justify-content-center">
+      <h2 class="my-5">Entreprises partenaires</h2>
+    </div>
+
+    <h3 class="px-3">Filtre</h3>
+    <div class="d-flex containerFiltres align-items-center justify-content-between">
+      <div class="filtres px-3">
+        <label class="form-label w-25 mt-2" for="reverseSort">Filtrer par type</label>
+        <select class="form-select" id="reverseSort" name="reverseSort" [(ngModel)]="selectType">
+          <option [ngValue]="''" selected>Toutes</option>
+          <option [ngValue]="'PME'" selected>PME</option>
+          <option [ngValue]="'SARL'">SARL</option>
+          <option [ngValue]="'SA'">SA</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="containerProduitCard py-3 w-100 d-flex flex-wrap m-0 justify-content-center">
+      <div class="d-flex justify-content-center" *ngFor="let entreprise of filteredEntreprises">
+        <app-entreprise-card [entreprise]="entreprise" ></app-entreprise-card>
+      </div>
+    </div>
+  </div>
+</div>

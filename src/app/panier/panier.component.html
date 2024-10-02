@@ -1,0 +1,34 @@
+<div class="pagePanier d-flex flex-column align-items-center justify-content-center">
+
+  <div class="produitPanier">
+    <h2 class="my-5"> Mon Panier </h2>
+    <div class="d-flex justify-content-end" style="width: 90%">
+      <button *ngIf="myCart.length != 0" class="btn btn btn-danger my-2" (click)="clearCart()">Vider mon panier<i class="fas fa-times ps-2"></i></button>
+    </div>
+
+
+    <p *ngIf="myCart.length === 0" class="my-5 text-center">Le panier est vide</p>
+
+    <div class="d-flex flex-wrap align-items-center justify-content-center boxPanier">
+      <div class="d-flex flex-column" *ngFor="let item of myCart">
+        <div class="cartePanier my-4 w-100">
+          <div class="d-flex p-2 PanierInfos">
+            <img class="iconPanier" [src]="item.image" alt="icon Panier">
+            <div class="ps-3 boxInfoPanier d-flex flex-column justify-content-center">
+              <h5 class="card-title">{{item.nom}}</h5>
+              <p>{{item.desc}}</p>
+              <p>{{item.prix}} €</p>
+              <p>{{item.taille}}</p>
+              <p>{{item.categorie.nom}}</p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn btn-danger mx-2" (click)="removeFromCart(item.id)">Retirer du panier <i class="ps-2 fas fa-trash"></i></button>
+            <button id="btnAddPanier" class="btn btn-warning mx-2" (click)="addToCart({id: item.id, nom: item.nom, prix: item.prix, desc: item.desc, taille: item.taille, image: item.image, categorie: item.categorie, entreprise: item.entreprise})">Ajouter  <i class="fas fa-plus-circle"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button *ngIf="myCart.length != 0" class="btn btn btn-success" style="margin-bottom: 15px; margin-left: 1%" [routerLink]="'/recapPanier'">Commander</button>
+</div>

@@ -1,0 +1,40 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="d-flex align-items-center">
+        <span class="navbar-toggler-icon"> </span>
+        <a class="d-flex align-items-center"><img class="imgMimiquiMiniMenu" src="assets/img/mimiqui.png"> Pikaplush</a>
+      </div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand"  [routerLink]="['home']"><img class="w-25" src="assets/img/mimiqui.png"> Pikaplush</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active d-flex align-items-center">
+          <a class="m-3" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" id="homeMenu" [class.active]="isLinkActive('home')" [routerLink]="['home']"><img src="./assets/img/Brocelome.png">Accueil</a>
+        </li>
+
+        <li class="nav-item active d-flex align-items-center">
+          <a class="m-3" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" id="produitsMenu" [class.active]="isLinkActive('produits')" [routerLink]="['produits']" (click)="closeMenu()"><img src="./assets/img/pokeball1.png">Produits</a>
+        </li>
+        <li class="nav-item active d-flex align-items-center">
+          <a class="m-3" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" id="entreprisesMenu" [class.active]="isLinkActive('entreprises')" [routerLink]="['entreprises']" (click)="closeMenu()"><img src="./assets/img/Posipi.png">Partenaires</a>
+        </li>
+        <li class="nav-item active d-flex align-items-center">
+          <a class="m-3" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" id="contactMenu" [class.active]="isLinkActive('contact')" [routerLink]="['contact']" (click)="closeMenu()"><img src="./assets/img/Cadoizo.png">Contact</a>
+        </li>
+        <li class="nav-item active d-flex align-items-center" *ngIf="loggedIn">
+          <a class="m-3" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" id="monCompteMenu" [class.active]="isLinkActive('monCompte')" [routerLink]="['monCompte']" (click)="closeMenu()"><img src="./assets/img/dresseur_n.png">Mon Compte</a>
+        </li>
+        <li class="nav-item active d-flex align-items-center" *ngIf="loggedIn">
+          <a class="m-3 d-flex" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" id="monPanier" [class.active]="isLinkActive('panier')" [routerLink]="['panier']" (click)="closeMenu()"><i class="fas fa-shopping-cart"></i><div class="numberArticles"> <p>{{this.cartSize}}</p></div></a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a *ngIf="!loggedIn" class="btn m-3 connexionMenu" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" [routerLink]="['login']" (click)="closeMenu()">Se connecter</a>
+        <a *ngIf="!loggedIn" class="btn m-3 inscriptionMenu" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" [routerLink]="['register']" (click)="closeMenu()">S'inscrire</a>
+        <a *ngIf="loggedIn" class="btn m-3 deconnexionMenu" [attr.data-toggle]="isMobile ? 'collapse' : null" [attr.data-target]="isMobile ? '#navbarTogglerDemo01' : null" aria-controls="navbarTogglerDemo01" (click)="logout(); closeMenu()">Se déconnecter <i class="fas fa-sign-out-alt"></i></a>
+      </form>
+    </div>
+  </nav>
+</header>

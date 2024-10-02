@@ -1,0 +1,10 @@
+<div class="card m-3" style="width: 20rem;">
+  <div class="imgProduit">
+    <img  src="./assets/img/pokemart.png" alt="icon entreprise">
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{entreprise.nom}}</h3>
+    <p class="card-text desc">Spécialité : {{entreprise.spe}}</p>
+    <button class="btn info m-1 me-4" (click)="readMore(this.entreprise.id)"  > Plus d'info <img src="./assets/img/loupe.png"></button>
+  </div>
+</div>

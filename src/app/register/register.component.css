@@ -1,0 +1,32 @@
+.formRegister{
+  border: black 1px solid;
+  padding: 3em;
+  border-radius: 10px;
+  display: flex!important;
+  flex-direction: row!important;
+  width: 50vw;
+  margin: 0!important;
+  margin-top: 1em!important;
+  margin-bottom: 1em!important;
+}
+
+.formRegister button{
+  background-color: red;
+  color: white;
+}
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .formRegister{
+    width: 100%;
+  }
+  .formRegister form{
+    width: 100%!important;
+  }
+
+  .formRegister img{
+    display: none;
+  }
+}
+
+

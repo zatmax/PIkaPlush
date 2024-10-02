@@ -1,0 +1,12 @@
+<div class="card m-3" style="width: 20rem;">
+  <div class="imgProduit">
+    <img  [src]="produit.image" alt="Card image cap">
+  </div>
+  <div class="card-body">
+    <p class="card-text price">{{produit.prix}}  € </p>
+    <h3 class="card-title">{{produit.nom}}</h3>
+    <p class="card-text desc">{{produit.desc}}</p>
+      <button class="btn info m-1 me-4" (click)="readMore(this.produit.id)" > Plus d'info <img src="./assets/img/loupe.png"></button>
+      <button *ngIf="loggedIn" class="btn ajoutPanier m-1 me-4" (click)="addToCart({id: produit.id, nom: produit.nom, prix: produit.prix, desc: produit.desc, taille: produit.taille, image: produit.image, categorie: produit.categorie, entreprise: produit.entreprise})"> Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
+  </div>
+</div>

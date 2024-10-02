@@ -1,0 +1,201 @@
+.pageEntreprise {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+.pageEntreprise h1 {
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 2.5em;
+  padding-top: 0.5em
+}
+
+.iconEntreprise{
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 20em;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.boxInfoEntreprise{
+  width: 50vw!important;
+}
+
+.produitImg img {
+  width: 15em;
+}
+
+.card-price {
+  color: red;
+  text-align: right;
+}
+
+.card {
+  background-color: rgba(252, 224, 100, 0.3);
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #c9c9c9;
+}
+
+.btn-success {
+  margin-right: 10px;
+}
+
+.carteEntreprise {
+  width: 90%;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #c9c9c9;
+  background-color: var(--new-bleu-clair-color);
+  }
+
+.boucleProduit {
+  margin-bottom: 30px;
+}
+
+.boxInfoEntreprise {
+  width: 100%;
+}
+
+.boxInfoEntreprise p {
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+}
+
+.produitEntreprise h2 {
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+}
+
+#btnModifProduit {
+  background-color: #797872;
+  color: white;
+  border: 1px solid black;
+}
+
+.produitImg{
+  z-index: 100;
+  position: relative;
+}
+
+#parentElementId{
+  width: 100%;
+}
+
+
+.desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.produitImg img {
+  width: 25em;
+}
+
+.price {
+  color: red;
+  text-align: right;
+  font-weight: bold;
+  font-size: 2em;
+  min-width: 4em;
+}
+
+.cardProduit{
+  background-color: var(--new-jaune-clair-color);
+  border-radius: 10px;
+}
+
+.ajoutPanier{
+  background-color: red;
+}
+
+.info{
+  background: lightgrey;
+}
+
+.info img{
+  width: 2em;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3{
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: 'Acme', sans-serif;
+}
+
+h4{
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+p{
+  font-size: 1em;
+}
+
+.card-body{
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.desc{
+  height: 3em;
+}
+
+.imgProduit{
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.imgProduit img{
+  height: 100%;
+}
+
+.card{
+  background-color: rgba(243, 238, 112, 0.46);
+}
+
+button{
+  border: 1px solid black;
+}
+
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .entrepriseInfos{
+    flex-direction: column;
+  }
+  .iconEntreprise{
+    width: 100%;
+  }
+  .boxInfoEntreprise{
+    align-items: center;
+    padding: 0!important;
+  }
+  .boxInfoEntreprise{
+    width: 100%!important;
+  }
+  .boxInfoEntreprise p{
+    width: 100%!important;
+  }
+
+}

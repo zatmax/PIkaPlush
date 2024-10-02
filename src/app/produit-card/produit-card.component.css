@@ -1,0 +1,97 @@
+.produitImg{
+  z-index: 100;
+  position: relative;
+}
+
+#parentElementId{
+  width: 100%;
+}
+
+
+.desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.produitImg img {
+  width: 25em;
+}
+
+.price {
+  color: red;
+  text-align: right;
+  font-weight: bold;
+  font-size: 2em;
+  min-width: 4em;
+}
+
+.cardProduit{
+  background-color: var(--new-jaune-clair-color);
+  border-radius: 10px;
+}
+
+.ajoutPanier{
+  background-color: red;
+}
+
+.info{
+  background: lightgrey;
+}
+
+.info img{
+  width: 2em;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3{
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: 'Acme', sans-serif;
+}
+
+h4{
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+p{
+  font-size: 1em;
+}
+
+.card-body{
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.desc{
+  height: 3em;
+}
+
+.imgProduit{
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.imgProduit img{
+  height: 100%;
+}
+
+.card{
+  background-color: rgba(243, 238, 112, 0.46);
+}
+
+button{
+  border: 1px solid black;
+}

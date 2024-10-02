@@ -1,0 +1,35 @@
+h2{
+  font-family: 'Acme', sans-serif;
+  font-size: 5em;
+  line-height: normal!important;
+  text-align: center;
+}
+
+h3{
+  font-family: 'Acme', sans-serif;
+  font-size: 2em;
+}
+
+.filtres{
+  width: 25vw;
+}
+
+.containerProduitCard{
+  width: 80vw;
+}
+
+.containerPage{
+  width: 80vw;
+}
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .containerFiltres{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .filtres{
+    width: 95%!important;
+  }
+}

@@ -1,0 +1,70 @@
+<div class="w-100 d-flex flex-column align-items-center justify-content-center">
+
+  <form class="my-4" #newEntrepriseF="ngForm" (ngSubmit)="(newEntrepriseF.form.valid) && onSubmit()">
+    <div class="form-title">
+      <h1 class="text-uppercase fw-bold text-center mb-4">Creer mon entreprise</h1>
+    </div>
+    <div class="form-group">
+      <label for="nom" class="form-label"></label>
+      <input type="text" placeholder="Nom entreprise" class="form-control" id="nom" #nom="ngModel"
+             [(ngModel)]="newEntrepriseForm.nom" name="nom" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="nom.errors && newEntrepriseF.submitted">
+      le champ ne doit pas être vide
+    </div>
+    <div class="form-group">
+      <label for="adresse" class="form-label"></label>
+      <input type="text" placeholder="adresse entreprise" class="form-control" id="adresse" #adresse="ngModel"
+             [(ngModel)]="newEntrepriseForm.adresse" name="adresse" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="adresse.errors && newEntrepriseF.submitted">
+      le champ ne doit pas être vide
+    </div>
+    <div class="form-group">
+      <label for="spe" class="form-label"></label>
+      <input type="text" placeholder="spe entreprise" class="form-control" id="spe" #spe="ngModel"
+             [(ngModel)]="newEntrepriseForm.spe" name="spe" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="spe.errors && newEntrepriseF.submitted">
+      le champ ne doit pas être vide
+    </div>
+    <div class="form-group">
+      <label for="siret" class="form-label"></label>
+      <input type="text" placeholder="siret entreprise" class="form-control" id="siret" #siret="ngModel"
+             [(ngModel)]="newEntrepriseForm.siret" name="siret" required>
+    </div>
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="siret.errors && newEntrepriseF.submitted">
+      le champ ne doit pas être vide
+    </div>
+
+    <div class="form-group">
+      <label for="type" class="form-label"></label>
+      <select class="form-select" id="type" #type="ngModel" [(ngModel)]="newEntrepriseForm.type"
+              name="type" required>
+        <option [value]="''">Choisissez un type</option>
+        <option  [value]="'PME'">PME</option>
+        <option  [value]="'SARL'">SARL</option>
+        <option  [value]="'SA'">SA</option>
+      </select>
+    </div>
+
+    <div class="alert alert-danger p-2 animate__animated animate__fadeIn"
+         role="alert"
+         *ngIf="(type.errors || newEntrepriseForm.type == '') && newEntrepriseF.submitted">
+      Vous devez sélectionner une catégorie
+    </div>
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-success">Ajouter</button>
+    </div>
+  </form>
+  <p class="link-danger w-75 text-center">N.B Lors de la création de l'entreprise, vous allez etre déconnecté, pour acceder à vos informations, reconnectez-vous</p>
+
+</div>

@@ -1,0 +1,53 @@
+h2{
+  font-family: 'Acme', sans-serif;
+  font-size: 5em;
+  text-align: center;
+  line-height: normal!important;
+
+}
+
+.contactPage{
+  width: 80vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: auto;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+
+h3{
+  font-family: 'Acme', sans-serif;
+  font-size: 2em;
+}
+
+.cardTitle{
+  font-family: 'Acme', sans-serif;
+  font-size: 3em;
+  align-self: center;
+}
+
+.infoContact p, .infoContact h4{
+  font-family: 'Acme', sans-serif;
+  font-size: 1.25em;
+}
+
+.infoContact h4{
+  font-size: 1.5em;
+}
+
+.pokeTimbre{
+  width: 10vw;
+}
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .formContact{
+    width: 100%!important;
+  }
+  .infoContact{
+    width: 100%!important;
+    margin-bottom: 1em;
+  }
+
+}
+

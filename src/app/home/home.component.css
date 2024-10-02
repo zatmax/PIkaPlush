@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@300;400;700&family=Rubik+Iso&display=swap');
+
+h1{
+  font-family: 'Acme', sans-serif;
+  font-size: 13vw;
+  text-shadow: 5px 2px #d4945b;
+
+}
+
+.imgAccueil img{
+  max-width: 25vw;
+}
+
+
+.contentAccueil{
+  margin: 3em;
+  width: 60vw;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.contentPart{
+  display: flex;
+  justify-content: center!important;
+}
+
+h3{
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: auto;
+}
+
+/* Média taille small */
+@media (max-width: 767px) {
+  .contentAccueil{
+    width: 90%;
+    padding: 1em;
+  }
+
+  .imgAccueil img{
+    max-width: 30vw;
+  }
+
+  .bannierePika{
+    display: none;
+  }
+}
+
+

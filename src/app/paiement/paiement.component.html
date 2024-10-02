@@ -1,0 +1,51 @@
+<h2 class="my-5">Payement</h2>
+
+<div>
+  <p>Total à payer : {{totalPrice}} €</p>
+  <div class="cardPaiement">
+    <div class="card-body p-4">
+      <form [formGroup]="paiementForm">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="form-outline">
+            <label class="form-label" for="typeText">Numéro de carte</label>
+            <input type="text" id="typeText" class="form-control form-control-lg" siez="20" required
+                   placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" formControlName="cardNumber"/>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"/>
+          </svg>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="form-outline">
+            <label class="form-label" for="typeName">Nom du titulaire</label>
+            <input type="text" id="typeName" class="form-control form-control-lg" size="20"
+                   placeholder="Nom du titulaire" formControlName="cardHolder"/>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center pb-2">
+          <div class="form-outline">
+            <label class="form-label" for="typeExp">Expiration</label>
+            <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YYYY"
+                   size="12" id="exp" minlength="7" maxlength="7" formControlName="expiration"/>
+          </div>
+          <div class="form-outline">
+            <label class="form-label" for="typeText2">Cvv</label>
+            <input type="password" id="typeText2" class="form-control form-control-lg"
+                   placeholder="&#9679;&#9679;&#9679;" size="4" minlength="3" maxlength="3" formControlName="cvv"/>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class=boutonPaiement>
+      <button class="btn procederPaiement my-4" (click)="payementOk()"> Payer {{this.totalPrice}} €<i class=" ps-2 fas fa-shopping-cart"></i>
+      </button>
+  </div>
+
+</div>
+
+
